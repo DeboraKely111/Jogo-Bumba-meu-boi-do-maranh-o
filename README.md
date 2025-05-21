@@ -17,6 +17,7 @@ Características do Jogo
 - Sistema de pontuação que exibe a pontuação atual na tela.
 - Sistema de fases que permite ao jogador avançar para a próxima fase após completar a atual alcançando o troféu.
 - possui som de fundo, ao pular e coletar itens.
+- Ao pressionar o botão ESC o jogo volta para o menu inicial.
 
 Tecnologias Utilizadas
 - C#
