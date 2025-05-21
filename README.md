@@ -1,6 +1,10 @@
 # Jogo-Bumba-meu-boi-do-maranhao
 
+Tema Escolhido  
+Tema: Bumba-meu-boi e Festas Tradicionais
 
+Justificativa:
+Escolhemos o Bumba-meu-boi por ser uma das expressões culturais mais vibrantes e simbólicas do Maranhão. Transformar o Boi em protagonista coloca no centro do jogo a essência da festa: a jornada mágica da vida, morte e ressurreição. Com essa abordagem, o jogador vivencia uma aventura cheia de cores, ritmos e desafios inspirados na tradição maranhense.
 
 Descrição do Projeto
 BUMBA MEU BOI é um jogo de plataforma/ação desenvolvido em Unity. O jogador Principalé o BOI BUMBA controla que precisa navegar por diferentes fases, coletando itens e evitando obstáculos para alcançar o final da fase.
