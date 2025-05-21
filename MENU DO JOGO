@@ -1,0 +1,20 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+public class MenuDoJogo : MonoBehaviour
+{
+    public string nomeDaPrimeiraFase;
+    public void CarregarJogo()
+    {
+
+        SceneManager.LoadScene(nomeDaPrimeiraFase);
+    }
+
+    public void SairDoJogo()
+    {
+
+        Debug.Log("Saiu do jogo");
+        Application.Quit();
+  }
+}
