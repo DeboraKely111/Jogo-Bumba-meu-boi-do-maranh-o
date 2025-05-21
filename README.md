@@ -15,7 +15,6 @@ Características do Jogo
 - possui som de fundo, ao pular e coletar itens.
 
 Tecnologias Utilizadas
-- Unity
 - C#
 
 Scripts Principais
