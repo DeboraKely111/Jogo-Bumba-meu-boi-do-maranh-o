@@ -1,0 +1,39 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Inimigos : MonoBehaviour
+{
+public Transform[] pontosDoCaminho;
+public int pontoAtual;
+
+public float velocidadeDoInimigo;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        pontoAtual = 0;
+        transform.position = pontosDoCaminho[0].position;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        MoverInimigo();
+    }
+private void MoverInimigo()
+{
+   transform.position = Vector2.MoveTowards(transform.position, pontosDoCaminho[pontoAtual].position, velocidadeDoInimigo * Time.deltaTime);
+   if(transform.position == pontosDoCaminho[pontoAtual].position)
+   {
+    pontoAtual += 1;
+
+    if(pontoAtual >= pontosDoCaminho.Length)
+   {
+     pontoAtual = 0;
+   }
+    
+   }
+}
+
+}
