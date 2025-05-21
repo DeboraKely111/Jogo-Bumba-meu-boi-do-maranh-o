@@ -12,6 +12,7 @@ Características do Jogo
 - Inimigos como índios.
 - Sistema de pontuação que exibe a pontuação atual na tela.
 - Sistema de fases que permite ao jogador avançar para a próxima fase após completar a atual alcançando o troféu.
+- possui som de fundo, ao pular e coletar itens.
 
 Tecnologias Utilizadas
 - Unity
@@ -25,6 +26,7 @@ Scripts Principais
 - MenuDoJogo.cs: controla o menu do jogo.
 - CenarioInfinito.cs: controla o cenário infinito do jogo.
 - SFXManager.cs: controla os efeitos sonoros do jogo.
+- jogo 2D.
 
 Como Executar o Jogo
 1. Clone o repositório para o seu computador.
