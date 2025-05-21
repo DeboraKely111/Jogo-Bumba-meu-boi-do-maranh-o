@@ -1,0 +1,72 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+
+public class GameManager : MonoBehaviour
+{
+    public static GameManager instance;
+
+    public Text textoDePontuacaoAtual;
+    public int pontuacaoAtual;
+    public string nomeDoMenuInicial;
+    public string nomeDaProximaFase;
+    public float tempoParaRecarregarFase;
+    public float tempoParaCarregarNovaFase;
+
+    void Awake()
+    {
+        instance = this;
+    }
+
+    void Start()
+    {
+        pontuacaoAtual = 0;
+        textoDePontuacaoAtual.text = "PONTUAÇÃO: " + pontuacaoAtual;     }
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            VoltarAoMenu();
+        }
+    }
+
+    public void AumentarPontuacao(int pontosParaGanhar)
+    {
+        pontuacaoAtual += pontosParaGanhar;
+        textoDePontuacaoAtual.text = "PONTUAÇÃO: " + pontuacaoAtual;
+    }
+
+    private void VoltarAoMenu()
+    {
+        SceneManager.LoadScene(nomeDoMenuInicial);
+    }
+
+    public void GameOver()
+    {
+        RodarCoroutineRecarregarFase();
+    }
+
+    public void RodarCoroutineRecarregarFase()
+    {
+        StartCoroutine(RecarregarFase());
+    }
+
+    private IEnumerator RecarregarFase()
+    {
+        yield return new WaitForSeconds(tempoParaRecarregarFase);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
+    public void RodarCoroutinePassarDeFase()
+    {
+        StartCoroutine(PassarDeFase());
+    }
+
+    private IEnumerator PassarDeFase()
+    {
+        yield return new WaitForSeconds(tempoParaCarregarNovaFase);
+        SceneManager.LoadScene(nomeDaProximaFase);
+    }
+}
